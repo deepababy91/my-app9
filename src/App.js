@@ -1,24 +1,40 @@
 import React from 'react';
-import logo from './logo.svg';
+
 import './App.css';
 
 function App() {
-  return (
+    const nbrs=[4,1,23,8,7,93,22,44,43]
+    const colors=['red', 'blue', 'green']
+    for(let i=0;i<colors.length;i++)
+    {
+      let color=colors[i];
+      console.log("oldway:" + color);
+    }
+  colors.forEach( (color,index) => {
+    console.log("NEW WAY:" + color + "," + index);
+  })
+  let nbrs2=nbrs.map((nbr) => {
+     return nbr*2;
+  })
+ nbrs2.forEach( (nbr) => {
+    console.log(nbr);
+  })
+  let nbrs3=nbrs.filter((nbr) => {
+    console.log(nbr,(nbr%2==0))
+    return nbr%2==0;
+ })
+ nbrs3.forEach( (nbr) => {
+  console.log(nbr);
+})
+  
+    return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    {
+      colors.map( (color,index) => {
+     return<div key={index}>{color}</div>;
+      })
+    }
+       
     </div>
   );
 }
