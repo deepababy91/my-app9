@@ -39,6 +39,7 @@ function App() {
       return<div key={index}>{nbr}</div>;
       })
     }
+    <h2>Advanced react tutuorial</h2>
   
 
        
