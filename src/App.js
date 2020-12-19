@@ -34,6 +34,12 @@ function App() {
      return<div key={index}>{color}</div>;
       })
     }
+    {
+      nbrs.map( (nbr,index) => {
+      return<div key={index}>{nbr}</div>;
+      })
+    }
+
        
     </div>
   );
