@@ -4,7 +4,7 @@ import './App.css';
 
 function App() {
     const nbrs=[4,1,23,8,7,93,22,44,43]
-    const colors=['red', 'blue', 'green']
+    const colors=['red1', 'blue', 'green']
     for(let i=0;i<colors.length;i++)
     {
       let color=colors[i];
@@ -39,6 +39,7 @@ function App() {
       return<div key={index}>{nbr}</div>;
       })
     }
+  
 
        
     </div>
